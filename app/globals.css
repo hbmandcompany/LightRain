@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ink: #0a0a0a;
+  --color-paper: #ffffff;
+  --color-bone: #f7f6f2;
+  --color-mist: rgba(10, 10, 10, 0.55);
+  --color-hair: rgba(10, 10, 10, 0.12);
+  --color-wire: rgba(10, 10, 10, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-paper text-ink antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+::selection {
+  @apply bg-bone text-ink;
+}
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-ink;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-paper focus:px-4 focus:py-3 focus:text-[13px] focus:text-ink;
+  border: 0.5px solid rgba(10, 10, 10, 0.12);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(10, 10, 10, 0.55);
+}
