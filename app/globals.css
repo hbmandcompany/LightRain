@@ -57,6 +57,19 @@ body {
   border: 0.5px solid rgba(10, 10, 10, 0.12);
 }
 
+/* Same flat field as `HomepageHeader` (`bg-ivory` / --color-ivory) */
+.hero-ouverture-texture {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--color-ivory);
+}
+
+.hero-cards-luxury-panel {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--color-ivory);
+}
+
 input::placeholder,
 textarea::placeholder {
   color: rgba(10, 10, 10, 0.55);

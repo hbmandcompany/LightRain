@@ -17,7 +17,45 @@ export const homepageCopy = {
     body:
       "LightRain is a decentralized execution and credit abstraction protocol on Base. Atomic flash liquidity from Aave-grade pools, durable collateralized credit from a reputation-weighted vault, and a strategy router that composes the two into a single transaction. Built for the institutions for whom milliseconds are currency and reconciliation is non-negotiable.",
     primaryCta: { label: "Lire le protocole →", href: "#section-these" },
-    secondaryCta: { label: "Accéder à LightRain →", href: "/login" },
+    heroBand: {
+      card: {
+        greeting: "Good morning",
+        subtitle: "Sign on to manage your positions and your credit lines.",
+        usernameLabel: "Username",
+        passwordLabel: "Password",
+        saveUsername: "Save username",
+        signOn: "Sign on",
+        enroll: "Open an account",
+        showPassword: "Show",
+        footer: [
+          { label: "Sign on with a passkey", href: "/login" },
+          { label: "Forgot username or password?", href: "/login" },
+          {
+            label: "Privacy, cookies, and legal notices",
+            href: "#section-dossier",
+          },
+        ],
+      },
+      applyOfferColumn: {
+        emailSection: {
+          title: "Checking",
+          bulletEm: "Takes minutes",
+          bulletRest: "– fast, simple, and secure.",
+          primaryCta: { label: "Request Invitation", href: "/login" },
+          body:
+            "We’ll email you a secure link to set up your Everyday Checking. Your offer is applied when you finish the application from that message—no branch visit and nothing to mail in.",
+        },
+        smsSection: {
+          title: "Number Ledger",
+          bulletEm: "Flash loans",
+          bulletRest:
+            "– opt in for draw notices, repayment alerts, and Flash Loan confirmations by SMS during enrollment.",
+          submitLabel: "Submit Application",
+          consent:
+            "SMS enrollment is completed in a secure flow after you tap above. Automated messages from LightRain may follow for Number Ledger and flash execution. Message and data rates may apply. Reply STOP to opt out, HELP for help.",
+        },
+      },
+    },
     statsStrip: [
       { label: "NOTIONNEL TRAITÉ", value: "$1.84 Md" },
       { label: "LIGNES DE CRÉDIT", value: "1 207" },

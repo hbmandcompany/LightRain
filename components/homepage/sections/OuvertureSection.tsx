@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { CompassRose } from "@/components/homepage/illustrations/CompassRose";
+import { OuvertureHeroBand } from "@/components/homepage/sections/OuvertureHeroBand";
 import { DropCap } from "@/components/homepage/primitives/DropCap";
 import { NumeralBordeaux } from "@/components/homepage/primitives/NumeralBordeaux";
 import { Reveal } from "@/components/primitives/Reveal";
@@ -14,10 +15,16 @@ export function OuvertureSection() {
     <section
       id={c.sectionId}
       aria-labelledby={c.headingId}
-      className="min-h-screen bg-ivory py-24 md:py-32"
+      className="min-h-screen bg-ivory pt-12 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28"
     >
-      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-10">
-        <div className="grid grid-cols-12 gap-8 border-b border-trame pb-4 pt-24 [border-bottom-width:0.5px]">
+      <div className="hero-ouverture-texture w-full">
+        <div className="relative z-[1] mx-auto w-full max-w-[1280px] px-6 md:px-10">
+          <OuvertureHeroBand />
+        </div>
+      </div>
+
+      <div className="relative z-[1] mx-auto w-full max-w-[1280px] px-6 md:px-10">
+        <div className="grid grid-cols-12 gap-8 border-b border-trame pb-4 pt-6 md:pt-8 [border-bottom-width:0.5px]">
           <p className="col-span-12 font-mono text-[11px] font-normal uppercase tracking-eyebrow-wide text-sable lg:col-span-4">
             {c.eyebrow}
           </p>
@@ -51,12 +58,6 @@ export function OuvertureSection() {
                   className="inline-flex rounded-full border border-solid border-noir border-[0.5px] bg-noir px-8 py-3 text-[14px] font-normal text-parchment transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
                 >
                   {c.primaryCta.label}
-                </Link>
-                <Link
-                  href={c.secondaryCta.href}
-                  className="inline-flex rounded-full border border-solid border-noir border-[0.5px] bg-transparent px-8 py-3 text-[14px] font-normal text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
-                >
-                  {c.secondaryCta.label}
                 </Link>
               </div>
             </Reveal>
