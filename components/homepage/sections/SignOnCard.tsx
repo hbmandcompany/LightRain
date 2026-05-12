@@ -35,7 +35,7 @@ export function SignOnCard({
   const saveId = `${id}-save`;
 
   return (
-    <div className="w-[280px] max-w-full overflow-hidden rounded-2xl border border-trame bg-paper [border-width:0.5px] shadow-none ring-1 ring-noir/[0.06]">
+    <div className="w-[280px] max-w-full overflow-hidden rounded-2xl border border-trame bg-bone [border-width:0.5px] shadow-none ring-1 ring-noir/[0.06]">
       <div className="flex flex-col gap-4 px-5 pb-5 pt-5">
         <div>
           <p className="font-serif text-[1.375rem] font-normal leading-[1.1] tracking-tight text-noir [font-variation-settings:'opsz'_144]">

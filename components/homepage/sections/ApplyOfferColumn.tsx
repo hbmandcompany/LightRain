@@ -26,8 +26,8 @@ export function ApplyOfferColumn({ copy }: { copy: ApplyOfferCopy }) {
   };
 
   return (
-    <article className="w-full max-w-[min(100%,22rem)] overflow-hidden rounded-2xl border border-trame bg-paper [border-width:0.5px] shadow-none ring-1 ring-noir/[0.06] sm:max-w-[23rem]">
-      <div className="relative bg-paper px-3.5 pb-6 pt-4 sm:px-4 sm:pb-7 sm:pt-5">
+    <article className="w-full max-w-[min(100%,22rem)] overflow-hidden rounded-2xl border border-trame bg-bone [border-width:0.5px] shadow-none ring-1 ring-noir/[0.06] sm:max-w-[23rem]">
+      <div className="relative bg-bone px-3.5 pb-6 pt-4 sm:px-4 sm:pb-7 sm:pt-5">
         <h3 className="font-serif text-[1.15rem] font-normal leading-[1.15] tracking-tight text-noir sm:text-[1.25rem] [font-variation-settings:'opsz'_144]">
           {email.title}
         </h3>
