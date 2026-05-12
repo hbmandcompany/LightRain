@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { EngraveMark } from "@/components/homepage/illustrations/EngraveMark";
+import { useHideHeaderOnScrollDown } from "@/hooks/useHideHeaderOnScrollDown";
 import { homepageCopy } from "@/lib/homepage-copy";
 
 const sectionIds = [
@@ -16,6 +17,7 @@ const sectionIds = [
 ] as const;
 
 export function HomepageHeader() {
+  const headerHidden = useHideHeaderOnScrollDown();
   const [active, setActive] = useState<string>(sectionIds[0]);
 
   useEffect(() => {
@@ -43,7 +45,13 @@ export function HomepageHeader() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-[72px] border-b border-trame bg-ivory [border-bottom-width:0.5px]">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 h-[72px] border-b border-trame bg-ivory transition-transform duration-300 ease-out motion-reduce:transition-none [border-bottom-width:0.5px] ${
+        headerHidden
+          ? "-translate-y-full pointer-events-none"
+          : "translate-y-0"
+      }`}
+    >
       <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between gap-4 px-6 md:px-10">
         <div className="min-w-0 shrink">
           <Link
@@ -76,7 +84,7 @@ export function HomepageHeader() {
           </nav>
           <Link
             href={homepageCopy.header.cta.href}
-            className="inline-flex shrink-0 border border-solid border-noir border-[0.5px] px-3 py-2 text-[12px] font-normal text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux [border-radius:4px] md:px-4 md:text-[13px]"
+            className="inline-flex shrink-0 rounded-full border border-solid border-noir border-[0.5px] px-3 py-2 text-[12px] font-normal text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux md:px-4 md:text-[13px]"
           >
             {homepageCopy.header.cta.label}
           </Link>

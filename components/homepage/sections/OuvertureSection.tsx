@@ -48,13 +48,13 @@ export function OuvertureSection() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href={c.primaryCta.href}
-                  className="inline-flex border border-solid border-noir border-[0.5px] bg-noir px-8 py-3 text-[14px] font-normal text-parchment transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux [border-radius:4px]"
+                  className="inline-flex rounded-full border border-solid border-noir border-[0.5px] bg-noir px-8 py-3 text-[14px] font-normal text-parchment transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
                 >
                   {c.primaryCta.label}
                 </Link>
                 <Link
                   href={c.secondaryCta.href}
-                  className="inline-flex border border-solid border-noir border-[0.5px] bg-transparent px-8 py-3 text-[14px] font-normal text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux [border-radius:4px]"
+                  className="inline-flex rounded-full border border-solid border-noir border-[0.5px] bg-transparent px-8 py-3 text-[14px] font-normal text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
                 >
                   {c.secondaryCta.label}
                 </Link>

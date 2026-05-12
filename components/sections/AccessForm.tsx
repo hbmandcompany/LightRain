@@ -72,7 +72,7 @@ export function AccessForm() {
       <div className="col-span-12">
         <button
           type="submit"
-          className="bg-ink px-8 py-3 text-[14px] font-normal text-paper transition-opacity duration-200 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-radius:4px]"
+          className="rounded-full bg-ink px-8 py-3 text-[14px] font-normal text-paper transition-opacity duration-200 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
         >
           {copy.access.form.submit}
         </button>

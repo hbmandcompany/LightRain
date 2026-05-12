@@ -33,7 +33,7 @@ export function AppGatewaySection() {
           <Reveal delay={0.12}>
             <Link
               href={c.cta.href}
-              className="mt-10 inline-flex border border-solid border-noir border-[0.5px] bg-transparent px-8 py-3 text-[14px] font-normal text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux [border-radius:4px]"
+              className="mt-10 inline-flex rounded-full border border-solid border-noir border-[0.5px] bg-transparent px-8 py-3 text-[14px] font-normal text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
             >
               {c.cta.label}
             </Link>

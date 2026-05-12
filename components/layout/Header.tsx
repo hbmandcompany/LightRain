@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 
 import { Container } from "@/components/primitives/Container";
+import { useHideHeaderOnScrollDown } from "@/hooks/useHideHeaderOnScrollDown";
 import { copy, gateway } from "@/lib/copy";
 
 function WordMarkIcon() {
@@ -27,8 +30,16 @@ function WordMarkIcon() {
 }
 
 export function Header() {
+  const headerHidden = useHideHeaderOnScrollDown();
+
   return (
-    <header className="fixed inset-x-0 top-9 z-50 h-16 border-b border-solid border-hair bg-paper [border-bottom-width:0.5px]">
+    <header
+      className={`fixed inset-x-0 top-9 z-50 h-16 border-b border-solid border-hair bg-paper transition-transform duration-300 ease-out motion-reduce:transition-none [border-bottom-width:0.5px] ${
+        headerHidden
+          ? "-translate-y-[calc(100%+2.25rem)] pointer-events-none"
+          : "translate-y-0"
+      }`}
+    >
       <Container className="flex h-full items-center justify-between gap-6">
         <Link
           href="/login#overview"
@@ -60,7 +71,7 @@ export function Header() {
             <li className="shrink-0">
               <Link
                 href="/login#access"
-                className="border border-solid border-ink px-4 py-2 text-[13px] font-normal text-ink transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-radius:4px] [border-width:0.5px]"
+                className="rounded-full border border-solid border-ink px-4 py-2 text-[13px] font-normal text-ink transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-width:0.5px]"
               >
                 {copy.header.requestAccess}
               </Link>

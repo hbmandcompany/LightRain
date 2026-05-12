@@ -58,13 +58,13 @@ export function HeroSection({ variant = "marketing" }: HeroSectionProps) {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="#architecture"
-                  className="inline-flex bg-ink px-6 py-3 text-[14px] font-normal text-paper transition-opacity duration-200 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-radius:4px]"
+                  className="inline-flex rounded-full bg-ink px-6 py-3 text-[14px] font-normal text-paper transition-opacity duration-200 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
                 >
                   {copy.hero.primaryCta}
                 </Link>
                 <Link
                   href="#access"
-                  className="inline-flex border border-solid border-ink px-6 py-3 text-[14px] font-normal text-ink transition-colors duration-200 hover:bg-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-radius:4px] [border-width:0.5px]"
+                  className="inline-flex rounded-full border border-solid border-ink px-6 py-3 text-[14px] font-normal text-ink transition-colors duration-200 hover:bg-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-width:0.5px]"
                 >
                   {secondaryCta}
                 </Link>
