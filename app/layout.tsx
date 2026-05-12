@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import { copy } from "@/lib/copy";
 import "./globals.css";
@@ -55,7 +56,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${fraunces.variable} ${ibmPlexMono.variable}`}
     >
-      <body className="min-h-screen font-sans font-normal">{children}</body>
+      <body className="min-h-screen font-sans font-normal">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
