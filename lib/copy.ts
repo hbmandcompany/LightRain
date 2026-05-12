@@ -1,5 +1,14 @@
 const heroDescription =
-  "LightRain is the iOS observability surface for Lightra — the decentralized execution protocol on Base. It renders every position, every reconciliation, every oracle attestation, in real time. It does not sign transactions. It does not move funds. It is the eyes of the protocol, never the hands.";
+  "LightRain is the read-only iOS observability application for the LightRain execution stack on Base. It renders every position, every reconciliation, every oracle attestation, in real time. It does not sign transactions. It does not move funds. It is the eyes of the stack, never the hands.";
+
+export const gateway = {
+  returnLink: { label: "← Retour à LightRain", href: "/" },
+  headerSuffix: "Institutional app",
+  heroEyebrow: "iOS · read-only · application gateway",
+  heroSecondaryCta: "Continue to TestFlight →",
+  heroSubline:
+    "Sign in to your institutional LightRain instance, or request a TestFlight invitation.",
+} as const;
 
 export const copy = {
   meta: {
@@ -7,7 +16,7 @@ export const copy = {
   },
 
   header: {
-    wordmark: "Lightra",
+    wordmark: "LightRain",
     nav: [
       { label: "Protocol", href: "#protocol" },
       { label: "App", href: "#app" },
@@ -19,7 +28,7 @@ export const copy = {
   },
 
   footer: {
-    wordmark: "Lightra",
+    wordmark: "LightRain",
     columns: [
       {
         title: "Product",
@@ -55,13 +64,13 @@ export const copy = {
       },
     ],
     copyright:
-      "Operated by Hated By Many LLC. Lightra and LightRain are products of Hated By Many LLC.",
+      "Operated by Hated By Many LLC. LightRain is a registered trademark of Hated By Many LLC.",
     buildLabel: "Build",
   },
 
   hero: {
     eyebrow: "iOS · read-only · institutional",
-    headline: "The trust layer of Lightra, on a phone.",
+    headline: "The trust layer of LightRain execution, on a phone.",
     body: heroDescription,
     primaryCta: "See the architecture",
     secondaryCta: "Request institutional access",
@@ -294,7 +303,7 @@ export const copy = {
   access: {
     eyebrow: "Section 08 · access",
     headline: "Institutional access by request.",
-    body: "LightRain is in private TestFlight. Access is granted to institutional counterparties, allocators, and audit firms working with the Lightra protocol. Submit your firm and we will be in touch within five business days.",
+    body: "LightRain is in private TestFlight. Access is granted to institutional counterparties, allocators, and audit firms working with the LightRain stack. Submit your firm and we will be in touch within five business days.",
     form: {
       name: "Name",
       firm: "Firm",

@@ -6,22 +6,31 @@ import { Numeral } from "@/components/primitives/Numeral";
 import { Reveal } from "@/components/primitives/Reveal";
 import { Rule } from "@/components/primitives/Rule";
 import { SectionHeading } from "@/components/primitives/SectionHeading";
-import { copy } from "@/lib/copy";
+import { copy, gateway } from "@/lib/copy";
 
-export function HeroSection() {
+export interface HeroSectionProps {
+  variant?: "marketing" | "gateway";
+}
+
+export function HeroSection({ variant = "marketing" }: HeroSectionProps) {
   const metrics = copy.hero.metrics;
+  const isGateway = variant === "gateway";
+  const eyebrow = isGateway ? gateway.heroEyebrow : copy.hero.eyebrow;
+  const secondaryCta = isGateway
+    ? gateway.heroSecondaryCta
+    : copy.hero.secondaryCta;
 
   return (
     <section
       id="overview"
       aria-labelledby="hero-heading"
-      className="min-h-screen bg-paper pb-24 pt-32 md:pb-32 md:pt-40"
+      className={`min-h-screen bg-paper pb-24 ${isGateway ? "pt-[140px] md:pt-[148px]" : "pt-32 md:pt-40"}`}
     >
       <Container>
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 lg:col-span-8">
             <Reveal delay={0}>
-              <Eyebrow className="mb-8">{copy.hero.eyebrow}</Eyebrow>
+              <Eyebrow className="mb-8">{eyebrow}</Eyebrow>
             </Reveal>
             <Reveal delay={0.06}>
               <SectionHeading
@@ -38,6 +47,13 @@ export function HeroSection() {
                 {copy.hero.body}
               </p>
             </Reveal>
+            {isGateway ? (
+              <Reveal delay={0.14}>
+                <p className="mb-10 max-w-[52ch] text-[15px] font-normal leading-[1.6] text-mist">
+                  {gateway.heroSubline}
+                </p>
+              </Reveal>
+            ) : null}
             <Reveal delay={0.18}>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -50,7 +66,7 @@ export function HeroSection() {
                   href="#access"
                   className="inline-flex border border-solid border-ink px-6 py-3 text-[14px] font-normal text-ink transition-colors duration-200 hover:bg-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-radius:4px] [border-width:0.5px]"
                 >
-                  {copy.hero.secondaryCta}
+                  {secondaryCta}
                 </Link>
               </div>
             </Reveal>

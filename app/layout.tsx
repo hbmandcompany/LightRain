@@ -27,19 +27,19 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lightra.in"),
-  title: "Lightra · the trust layer of decentralized execution",
+  title: "LightRain · execution, credit, and observability on Base",
   description: copy.meta.description,
   openGraph: {
-    title: "Lightra · the trust layer of decentralized execution",
+    title: "LightRain · execution, credit, and observability on Base",
     description: copy.meta.description,
     url: "https://www.lightra.in",
-    siteName: "Lightra",
+    siteName: "LightRain",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lightra · the trust layer of decentralized execution",
+    title: "LightRain · execution, credit, and observability on Base",
     description: copy.meta.description,
   },
   robots: { index: true, follow: true },

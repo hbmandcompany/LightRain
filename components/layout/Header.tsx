@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Container } from "@/components/primitives/Container";
-import { copy } from "@/lib/copy";
+import { copy, gateway } from "@/lib/copy";
 
 function WordMarkIcon() {
   return (
@@ -28,15 +28,21 @@ function WordMarkIcon() {
 
 export function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-solid border-hair bg-paper [border-bottom-width:0.5px]">
+    <header className="fixed inset-x-0 top-9 z-50 h-16 border-b border-solid border-hair bg-paper [border-bottom-width:0.5px]">
       <Container className="flex h-full items-center justify-between gap-6">
         <Link
-          href="#overview"
-          className="flex shrink-0 items-center gap-3 text-ink transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+          href="/login#overview"
+          className="flex min-w-0 shrink-0 items-center gap-3 text-ink transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
         >
           <WordMarkIcon />
-          <span className="text-[15px] font-medium tracking-tight">
-            {copy.header.wordmark}
+          <span className="flex min-w-0 items-baseline gap-1.5 text-[15px] font-medium tracking-tight">
+            <span className="shrink-0">{copy.header.wordmark}</span>
+            <span className="shrink-0 text-mist" aria-hidden>
+              ·
+            </span>
+            <span className="min-w-0 truncate font-normal text-mist">
+              {gateway.headerSuffix}
+            </span>
           </span>
         </Link>
         <nav aria-label="Primary" className="min-w-0 flex-1">
@@ -53,7 +59,7 @@ export function Header() {
             ))}
             <li className="shrink-0">
               <Link
-                href="#access"
+                href="/login#access"
                 className="border border-solid border-ink px-4 py-2 text-[13px] font-normal text-ink transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-radius:4px] [border-width:0.5px]"
               >
                 {copy.header.requestAccess}

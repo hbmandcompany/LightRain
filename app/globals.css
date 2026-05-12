@@ -9,6 +9,12 @@
   --color-mist: rgba(10, 10, 10, 0.55);
   --color-hair: rgba(10, 10, 10, 0.12);
   --color-wire: rgba(10, 10, 10, 0.08);
+  --color-noir: #0e0e0c;
+  --color-parchment: #f4efe6;
+  --color-ivory: #fbf8f2;
+  --color-bordeaux: #5a1e2c;
+  --color-sable: rgba(14, 14, 12, 0.55);
+  --color-trame: rgba(14, 14, 12, 0.12);
 }
 
 html {
@@ -28,6 +34,14 @@ body {
 
 ::selection {
   @apply bg-bone text-ink;
+}
+
+.homepage-root ::selection {
+  @apply bg-bordeaux/20 text-noir;
+}
+
+.homepage-root *:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-bordeaux;
 }
 
 *:focus {
