@@ -5,9 +5,9 @@ import { homepageCopy } from "@/lib/homepage-copy";
 const footerColumnKeys = ["A", "B", "C", "D", "E", "F"] as const;
 
 function linkHref(label: string): string {
-  if (label.includes("@")) {
-    return `mailto:${label}`;
-  }
+  if (label.includes("@")) return `mailto:${label}`;
+  if (label === "Legal") return "/legal";
+  if (label === "Investor Relations") return "/legal#investor-relations";
   return "#";
 }
 

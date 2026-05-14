@@ -10,7 +10,6 @@ type SignOnCardProps = {
   subtitle: string;
   usernameLabel: string;
   passwordLabel: string;
-  saveUsername: string;
   signOn: string;
   enroll: string;
   showPassword: string;
@@ -22,7 +21,6 @@ export function SignOnCard({
   subtitle,
   usernameLabel,
   passwordLabel,
-  saveUsername,
   signOn,
   enroll,
   showPassword,
@@ -32,7 +30,6 @@ export function SignOnCard({
   const id = useId();
   const userId = `${id}-user`;
   const passId = `${id}-pass`;
-  const saveId = `${id}-save`;
 
   return (
     <div className="w-[280px] max-w-full overflow-hidden rounded-2xl border border-trame bg-bone [border-width:0.5px] shadow-none ring-1 ring-noir/[0.06]">
@@ -81,25 +78,15 @@ export function SignOnCard({
           </button>
         </div>
 
-        <label className="flex cursor-pointer items-center gap-2.5 text-[13px] font-normal text-noir">
-          <input
-            id={saveId}
-            name="save"
-            type="checkbox"
-            className="size-3.5 shrink-0 rounded-sm border-trame text-bordeaux focus:ring-bordeaux [border-width:0.5px]"
-          />
-          {saveUsername}
-        </label>
-
         <div className="flex flex-wrap items-center gap-3">
           <Link
-            href="/login"
-            className="inline-flex h-9 items-center justify-center rounded-full border border-solid border-noir border-[0.5px] bg-noir px-7 font-sans text-[13px] font-normal text-parchment transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
+            href="/download"
+            className="inline-flex h-8 items-center justify-center rounded-full border border-solid border-noir border-[0.5px] bg-noir px-7 font-sans text-[13px] font-normal text-parchment transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
           >
             {signOn}
           </Link>
           <Link
-            href="/login"
+            href="/download"
             className="font-sans text-[13px] font-normal text-bordeaux underline-offset-2 hover:underline"
           >
             {enroll}
@@ -107,7 +94,7 @@ export function SignOnCard({
         </div>
       </div>
 
-      <div className="border-t border-trame bg-parchment px-5 py-3 [border-top-width:0.5px]">
+      <div className="relative border-t border-trame bg-parchment px-5 pb-6 pt-3 [border-top-width:0.5px]">
         <ul className="flex flex-col gap-2">
           {footer.map((item) => (
             <li key={item.label}>
@@ -120,6 +107,12 @@ export function SignOnCard({
             </li>
           ))}
         </ul>
+        <Link
+          href="/legal"
+          className="pointer-events-auto absolute bottom-3 right-3 font-mono text-[9px] text-sable underline-offset-2 hover:underline select-none"
+        >
+          legal
+        </Link>
       </div>
     </div>
   );

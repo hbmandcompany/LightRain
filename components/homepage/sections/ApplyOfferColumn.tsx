@@ -21,8 +21,8 @@ export function ApplyOfferColumn({ copy }: { copy: ApplyOfferCopy }) {
   const email = copy.emailSection;
   const sms = copy.smsSection;
   const cta = email.primaryCta ?? {
-    label: "Request Invitation",
-    href: "/login",
+    label: "Attestation",
+    href: "/download",
   };
 
   return (
@@ -69,8 +69,14 @@ export function ApplyOfferColumn({ copy }: { copy: ApplyOfferCopy }) {
             className="mt-1.5 inline-block size-[3px] shrink-0 rounded-full bg-bordeaux"
             aria-hidden
           />
-          <span>
-            <span className="font-medium">{sms.bulletEm}</span> {sms.bulletRest}
+          <span className="whitespace-pre-line">
+            <span className="font-medium">{sms.bulletEm}</span>
+            {sms.bulletRest ? (
+              <>
+                {"\n"}
+                {sms.bulletRest}
+              </>
+            ) : null}
           </span>
         </p>
 

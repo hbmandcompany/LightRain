@@ -23,36 +23,32 @@ export const homepageCopy = {
         subtitle: "Sign on to manage your positions and your credit lines.",
         usernameLabel: "Username",
         passwordLabel: "Password",
-        saveUsername: "Save username",
         signOn: "Sign on",
         enroll: "Open an account",
         showPassword: "Show",
         footer: [
-          { label: "Sign on with a passkey", href: "/login" },
-          { label: "Forgot username or password?", href: "/login" },
-          {
-            label: "Privacy, cookies, and legal notices",
-            href: "#section-dossier",
-          },
+          { label: "SSO with BlackLetter", href: "/download" },
+          { label: "Forgot username or password?", href: "/download" },
         ],
       },
       applyOfferColumn: {
         emailSection: {
-          title: "Checking",
-          bulletEm: "Takes minutes",
-          bulletRest: "– fast, simple, and secure.",
-          primaryCta: { label: "Request Invitation", href: "/login" },
+          title: "LedgerBranch",
+          bulletEm: "Identity Encryption",
+          bulletRest:
+            " — End-to-end protection",
+          primaryCta: { label: "Attestation", href: "/download" },
           body:
-            "We’ll email you a secure link to set up your Everyday Checking. Your offer is applied when you finish the application from that message—no branch visit and nothing to mail in.",
+            "We'll email you a secure link to establish your account. Identity encryption is enabled once you complete the flow. Your recovery signers are configured immediately.",
         },
         smsSection: {
-          title: "Number Ledger",
-          bulletEm: "Flash loans",
+          title: "BlackLetter",
+          bulletEm: "Account & Signature Services",
           bulletRest:
-            "– opt in for draw notices, repayment alerts, and Flash Loan confirmations by SMS during enrollment.",
-          submitLabel: "Submit Application",
+            "Decentralized authentication for DeFi applications.",
+          submitLabel: "Signature",
           consent:
-            "SMS enrollment is completed in a secure flow after you tap above. Automated messages from LightRain may follow for Number Ledger and flash execution. Message and data rates may apply. Reply STOP to opt out, HELP for help.",
+            "Generate cryptographic signatures tied to your attestation. Each application login is a verified signature request. Your keys never leave your control.",
         },
       },
     },
@@ -305,7 +301,7 @@ export const homepageCopy = {
     eyebrow: "§ 10 — Surveillance · the application",
     headline: "LightRain — the trust layer, on a phone.",
     body: "LightRain is the iOS application of the house. Read-only, institutional, App Store-distributed. It renders every LightRain position, reconciliation, and oracle attestation in real time. It does not sign transactions. It does not move funds. It is the eyes of the protocol, never the hands.",
-    cta: { label: "Accéder à LightRain →", href: "/login" },
+    cta: { label: "Accéder à LightRain →", href: "/download" },
     phoneScreenTitle: "Portfolio",
   },
   dossier: {
@@ -370,7 +366,7 @@ export const homepageCopy = {
       { label: "Maison", href: "#section-maison" },
       { label: "Dossier", href: "#section-dossier" },
     ],
-    cta: { label: "Accéder à LightRain →", href: "/login" },
+    cta: { label: "Accéder à LightRain →", href: "/download" },
   },
   footer: {
     slabTitle: "LightRain.",
@@ -461,8 +457,8 @@ export const homepageCopy = {
           "Travel Rule",
           "KYC institutionnel",
           "KYB process",
-          "Annual report",
-          "Quarterly disclosures",
+          "Legal",
+          "Investor Relations",
           "Privacy notice",
           "Terms of service",
           "Cookie policy",

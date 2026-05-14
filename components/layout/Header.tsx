@@ -1,9 +1,6 @@
-"use client";
-
 import Link from "next/link";
 
 import { Container } from "@/components/primitives/Container";
-import { useHideHeaderOnScrollDown } from "@/hooks/useHideHeaderOnScrollDown";
 import { copy, gateway } from "@/lib/copy";
 
 function WordMarkIcon() {
@@ -30,19 +27,11 @@ function WordMarkIcon() {
 }
 
 export function Header() {
-  const headerHidden = useHideHeaderOnScrollDown();
-
   return (
-    <header
-      className={`fixed inset-x-0 top-9 z-50 h-16 border-b border-solid border-hair bg-paper transition-transform duration-300 ease-out motion-reduce:transition-none [border-bottom-width:0.5px] ${
-        headerHidden
-          ? "-translate-y-[calc(100%+2.25rem)] pointer-events-none"
-          : "translate-y-0"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-9 z-50 h-16 border-b border-solid border-hair bg-paper [border-bottom-width:0.5px]">
       <Container className="flex h-full items-center justify-between gap-6">
         <Link
-          href="/login#overview"
+          href="/download#overview"
           className="flex min-w-0 shrink-0 items-center gap-3 text-ink transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
         >
           <WordMarkIcon />
@@ -57,7 +46,7 @@ export function Header() {
           </span>
         </Link>
         <nav aria-label="Primary" className="min-w-0 flex-1">
-          <ul className="flex min-w-max items-center justify-end gap-6 overflow-x-auto py-1 md:gap-8">
+          <ul className="flex flex-wrap items-center justify-end gap-x-6 gap-y-2 py-1 md:gap-x-8">
             {copy.header.nav.map((item) => (
               <li key={item.href} className="shrink-0">
                 <Link
@@ -70,7 +59,7 @@ export function Header() {
             ))}
             <li className="shrink-0">
               <Link
-                href="/login#access"
+                href="/download#access"
                 className="rounded-full border border-solid border-ink px-4 py-2 text-[13px] font-normal text-ink transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink [border-width:0.5px]"
               >
                 {copy.header.requestAccess}
