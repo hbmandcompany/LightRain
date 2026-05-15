@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { HomepageFooter } from "@/components/homepage/Footer";
 import { HomeGatewayMarketing } from "@/components/homepage/HomeGatewayMarketing";
 import { HomepageHeader } from "@/components/homepage/Header";
+import { SectionPortalStrip } from "@/components/homepage/SectionPortalStrip";
 import { DossierSection } from "@/components/homepage/sections/DossierSection";
 import { OuvertureSection } from "@/components/homepage/sections/OuvertureSection";
 import { homepageCopy } from "@/lib/homepage-copy";
@@ -25,6 +26,7 @@ export default function Home() {
       <main className="pt-[72px]">
         <OuvertureSection showEditorial={false} />
         <HomeGatewayMarketing />
+        <SectionPortalStrip />
         <DossierSection />
       </main>
       <HomepageFooter />

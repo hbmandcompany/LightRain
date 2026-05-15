@@ -90,7 +90,7 @@ export function HomepageHeader() {
           </nav>
           <Link
             href={homepageCopy.header.cta.href}
-            className="inline-flex shrink-0 rounded-full border border-solid border-noir border-[0.5px] px-3 py-2 text-[12px] font-normal text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux md:px-4 md:text-[13px]"
+            className="inline-flex h-7 shrink-0 items-center rounded-full border border-solid border-noir border-[0.5px] px-2.5 text-[11px] font-normal leading-none text-noir transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux md:px-3 md:text-[12px]"
           >
             {homepageCopy.header.cta.label}
           </Link>

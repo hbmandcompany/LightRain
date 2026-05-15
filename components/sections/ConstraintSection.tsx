@@ -7,8 +7,8 @@ import { copy } from "@/lib/copy";
 
 function SquareMark() {
   return (
-    <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden className="shrink-0">
-      <rect width="8" height="8" fill="#0a0a0a" />
+    <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden className="shrink-0 text-noir">
+      <rect width="8" height="8" fill="currentColor" />
     </svg>
   );
 }
@@ -18,21 +18,25 @@ export function ConstraintSection() {
     <section
       id="constraint"
       aria-labelledby="constraint-heading"
-      className="min-h-screen bg-bone py-24 md:py-32"
+      className="min-h-screen bg-ivory py-24 text-noir md:py-32"
     >
       <Container>
         <Reveal>
-          <Eyebrow className="mb-8">{copy.constraint.eyebrow}</Eyebrow>
+          <Eyebrow className="mb-8 !text-sable">{copy.constraint.eyebrow}</Eyebrow>
         </Reveal>
         <Reveal delay={0.06}>
-          <SectionHeading id="constraint-heading" variant="lg" className="mb-12">
+          <SectionHeading
+            id="constraint-heading"
+            variant="lg"
+            className="mb-12 !text-noir"
+          >
             {copy.constraint.headline}
           </SectionHeading>
         </Reveal>
 
         <div className="grid grid-cols-12 gap-8">
           <Reveal delay={0.12} className="col-span-12 lg:col-span-6">
-            <p className="max-w-[62ch] text-[17px] font-normal leading-[1.6] tracking-normal text-ink">
+            <p className="max-w-[62ch] text-[17px] font-normal leading-[1.6] tracking-normal text-noir">
               {copy.constraint.leftColumn}
             </p>
           </Reveal>
@@ -40,26 +44,26 @@ export function ConstraintSection() {
             <ul className="flex flex-col gap-3">
               {copy.constraint.cannotItems.map((item) => (
                 <li key={item}>
-                  <Rule className="mb-3" />
+                  <Rule className="mb-3 !border-trame" />
                   <div className="flex items-start gap-3 pt-1">
                     <SquareMark />
-                    <p className="text-[14px] font-normal leading-[1.6] text-ink">
+                    <p className="text-[14px] font-normal leading-[1.6] text-noir">
                       {item}
                     </p>
                   </div>
                 </li>
               ))}
               <li>
-                <Rule />
+                <Rule className="!border-trame" />
               </li>
             </ul>
           </Reveal>
         </div>
 
         <div className="mt-24 md:mt-[96px]">
-          <Rule className="mb-24 md:mb-[96px]" />
+          <Rule className="mb-24 !border-trame md:mb-[96px]" />
           <Reveal delay={0.06}>
-            <p className="font-serif text-display-md font-normal italic text-mist">
+            <p className="font-serif text-display-md font-normal italic text-sable">
               {copy.constraint.pullQuote}
             </p>
           </Reveal>
