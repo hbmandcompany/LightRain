@@ -21,7 +21,7 @@ export function ApplyOfferColumn({ copy }: { copy: ApplyOfferCopy }) {
   const email = copy.emailSection;
   const sms = copy.smsSection;
   const cta = email.primaryCta ?? {
-    label: "Application",
+    label: "Enrollment",
     href: "/#access",
   };
 

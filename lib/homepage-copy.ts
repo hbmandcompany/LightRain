@@ -37,7 +37,7 @@ export const homepageCopy = {
           bulletEm: "Identity Encryption",
           bulletRest:
             " — End-to-end protection for attestations and session-bound keys",
-          primaryCta: { label: "Application", href: "/#access" },
+          primaryCta: { label: "Enrollment", href: "/#access" },
           body:
             "We'll email you a secure link to establish your account. Identity encryption is enabled once you complete the flow. Your recovery signers are configured immediately.",
         },
@@ -46,7 +46,7 @@ export const homepageCopy = {
           bulletEm: "Account & Signature Sign On Services",
           bulletRest:
             "Policy-governed credential posture: attestation-brokered access and sign-on.",
-          submitLabel: "Enrollment",
+          submitLabel: "Application",
           consent:
             "Generate cryptographic signatures tied to your attestation. Each application login is a verified signature request. Your keys never leave your control.",
         },
