@@ -9,26 +9,26 @@ export const homepageCopy = {
     eyebrow: "§ 01 — Ouverture",
     headline: {
       line1: "La liquidité, instantanée.",
-      line2: "Le crédit, durable.",
-      line3: "LightRain makes both",
-      line4: "a single execution rail.",
+      line2: "The speed of liquidity.",
+      line3: "The permanence of credit.",
+      line4: "The singularity of execution.",
       dropCap: "L",
     },
     body:
       "LightRain is a decentralized execution and credit abstraction protocol on Base. Atomic flash liquidity from Aave-grade pools, durable collateralized credit from a reputation-weighted vault, and a strategy router that composes the two into a single transaction. Built for the institutions for whom milliseconds are currency and reconciliation is non-negotiable.",
-    primaryCta: { label: "Lire le protocole →", href: "#section-these" },
+    primaryCta: { label: "Lire le protocole →", href: "/endowments#section-these" },
     heroBand: {
       card: {
-        greeting: "Good morning",
+        greeting: "Welcome Back",
         subtitle: "Sign on to manage your positions and your credit lines.",
-        usernameLabel: "Username",
+        usernameLabel: "Email",
         passwordLabel: "Password",
-        signOn: "Sign on",
-        enroll: "Open an account",
+        signOn: "Sign On",
+        enroll: "Create An Account",
         showPassword: "Show",
         footer: [
-          { label: "SSO with BlackLetter", href: "/download" },
-          { label: "Forgot username or password?", href: "/download" },
+          { label: "SSO with BlackLetter", href: "/#access" },
+          { label: "Forgot username or password", href: "/#access" },
         ],
       },
       applyOfferColumn: {
@@ -36,17 +36,17 @@ export const homepageCopy = {
           title: "LedgerBranch",
           bulletEm: "Identity Encryption",
           bulletRest:
-            " — End-to-end protection",
-          primaryCta: { label: "Attestation", href: "/download" },
+            " — End-to-end protection for attestations and session-bound keys",
+          primaryCta: { label: "Application", href: "/#access" },
           body:
             "We'll email you a secure link to establish your account. Identity encryption is enabled once you complete the flow. Your recovery signers are configured immediately.",
         },
         smsSection: {
           title: "BlackLetter",
-          bulletEm: "Account & Signature Services",
+          bulletEm: "Account & Signature Sign On Services",
           bulletRest:
-            "Decentralized authentication for DeFi applications.",
-          submitLabel: "Signature",
+            "Policy-governed credential posture: attestation-brokered access and sign-on.",
+          submitLabel: "Enrollment",
           consent:
             "Generate cryptographic signatures tied to your attestation. Each application login is a verified signature request. Your keys never leave your control.",
         },
@@ -301,7 +301,7 @@ export const homepageCopy = {
     eyebrow: "§ 10 — Surveillance · the application",
     headline: "LightRain — the trust layer, on a phone.",
     body: "LightRain is the iOS application of the house. Read-only, institutional, App Store-distributed. It renders every LightRain position, reconciliation, and oracle attestation in real time. It does not sign transactions. It does not move funds. It is the eyes of the protocol, never the hands.",
-    cta: { label: "Accéder à LightRain →", href: "/download" },
+    cta: { label: "Request access", href: "/#access" },
     phoneScreenTitle: "Portfolio",
   },
   dossier: {
@@ -359,14 +359,14 @@ export const homepageCopy = {
   },
   header: {
     nav: [
-      { label: "Thèse", href: "#section-these" },
-      { label: "Pratique", href: "#section-pratique" },
-      { label: "Mécanique", href: "#section-mecanique" },
-      { label: "Garanties", href: "#section-garanties" },
-      { label: "Maison", href: "#section-maison" },
-      { label: "Dossier", href: "#section-dossier" },
+      { label: "Thèse", href: "/endowments#section-these" },
+      { label: "Pratique", href: "/endowments#section-pratique" },
+      { label: "Mécanique", href: "/endowments#section-mecanique" },
+      { label: "Garanties", href: "/endowments#section-garanties" },
+      { label: "Maison", href: "/endowments#section-maison" },
+      { label: "Dossier", href: "/#section-dossier" },
     ],
-    cta: { label: "Accéder à LightRain →", href: "/download" },
+    cta: { label: "Endowments", href: "/endowments" },
   },
   footer: {
     slabTitle: "LightRain.",

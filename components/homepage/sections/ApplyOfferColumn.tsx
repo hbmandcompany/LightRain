@@ -21,8 +21,8 @@ export function ApplyOfferColumn({ copy }: { copy: ApplyOfferCopy }) {
   const email = copy.emailSection;
   const sms = copy.smsSection;
   const cta = email.primaryCta ?? {
-    label: "Attestation",
-    href: "/download",
+    label: "Application",
+    href: "/#access",
   };
 
   return (
@@ -32,7 +32,7 @@ export function ApplyOfferColumn({ copy }: { copy: ApplyOfferCopy }) {
           {email.title}
         </h3>
 
-        <p className="mt-3 flex gap-2 text-[14px] font-normal leading-[1.6] text-noir sm:mt-3.5">
+        <p className="mt-3 flex max-w-[38ch] gap-2 text-[14px] font-normal leading-[1.6] text-noir sm:mt-3.5">
           <span
             className="mt-1.5 inline-block size-[3px] shrink-0 rounded-full bg-bordeaux"
             aria-hidden
@@ -64,12 +64,12 @@ export function ApplyOfferColumn({ copy }: { copy: ApplyOfferCopy }) {
           {sms.title}
         </h3>
 
-        <p className="mt-3 flex gap-2 text-[14px] font-normal leading-[1.6] text-noir sm:mt-3.5">
+        <p className="mt-3 flex max-w-[38ch] gap-2 text-[14px] font-normal leading-[1.6] text-noir sm:mt-3.5">
           <span
             className="mt-1.5 inline-block size-[3px] shrink-0 rounded-full bg-bordeaux"
             aria-hidden
           />
-          <span className="whitespace-pre-line">
+          <span className="min-w-0 whitespace-pre-line">
             <span className="font-medium">{sms.bulletEm}</span>
             {sms.bulletRest ? (
               <>
@@ -89,12 +89,12 @@ export function ApplyOfferColumn({ copy }: { copy: ApplyOfferCopy }) {
           </button>
         </form>
 
-        <p className="mt-4 max-w-[40ch] text-[10px] font-normal leading-[1.55] text-sable sm:mt-5">
+        <p className="mt-4 max-w-[38ch] text-[12px] font-normal leading-[1.6] text-noir/75 sm:mt-5">
           {sms.consent}
         </p>
 
         <span className="pointer-events-none absolute bottom-3 right-3 font-mono text-[9px] text-sable select-none sm:bottom-4 sm:right-4">
-          payphone.cc
+          blackletter.cc
         </span>
       </div>
     </article>

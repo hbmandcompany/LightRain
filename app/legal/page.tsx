@@ -146,9 +146,9 @@ export default function LegalPage() {
         <LegalSection id="entity" ordinal="I." frTitle="Entité juridique" enTitle="Legal Entity & Corporate Structure">
           <Clause number="1.1" title="Operating company">
             LightRain is a protocol and application suite operated exclusively by
-            Hated By Many LLC ("the Company"), a limited liability company
+            Hated By Many LLC (“the Company”), a limited liability company
             organized under the laws of the State of Texas, United States of
-            America. The Company's principal place of business is in Texas. All
+            America. The Company’s principal place of business is in Texas. All
             contractual relationships arising from use of LightRain are with Hated
             By Many LLC.
           </Clause>
@@ -207,8 +207,8 @@ export default function LegalPage() {
           <Clause number="2.3" title="Restricted territories">
             Access is not available to persons or entities located in, incorporated
             in, or otherwise subject to the jurisdiction of: Cuba, Iran, North
-            Korea, Syria, the Crimea region, the so-called Donetsk People's
-            Republic, the so-called Luhansk People's Republic, any other
+            Korea, Syria, the Crimea region, the so-called Donetsk People’s
+            Republic, the so-called Luhansk People’s Republic, any other
             jurisdiction subject to comprehensive OFAC sanctions, and any
             jurisdiction where the provision of digital asset services is
             prohibited by applicable law. This list is non-exhaustive and is
@@ -280,7 +280,7 @@ export default function LegalPage() {
             legal counsel.
           </Clause>
           <Clause number="4.2" title="FinCEN / BSA compliance">
-            To the extent required by the Bank Secrecy Act and FinCEN's regulations
+            To the extent required by the Bank Secrecy Act and FinCEN’s regulations
             for money services businesses and virtual asset service providers, the
             Company maintains an AML/CFT program, conducts customer identification
             procedures, and files Suspicious Activity Reports as required.
@@ -301,7 +301,7 @@ export default function LegalPage() {
           </Clause>
           <Clause number="4.5" title="Travel Rule">
             For transactions that meet applicable thresholds, the Company complies
-            with FinCEN's Travel Rule requirements for transmittal of funds and
+            with FinCEN’s Travel Rule requirements for transmittal of funds and
             cooperates with Financial Action Task Force (FATF) Recommendation 16
             obligations where applicable.
           </Clause>
@@ -351,7 +351,7 @@ export default function LegalPage() {
           </Clause>
           <Clause number="6.3" title="Retention">
             Compliance records are retained for a minimum of five years from the
-            date of the relationship's termination, or longer where required by
+            date of the relationship’s termination, or longer where required by
             applicable law. Users may request a copy of their data by contacting
             legal@lightra.in.
           </Clause>
@@ -377,8 +377,8 @@ export default function LegalPage() {
             under a separately executed agreement.
           </Clause>
           <Clause number="7.3" title="Trademarks">
-            "LightRain" and associated marks are registered trademarks of Hated By
-            Many LLC. "PostCarrier" is a registered trademark of Hated By Many LLC.
+            “LightRain” and associated marks are registered trademarks of Hated By
+            Many LLC. “PostCarrier” is a registered trademark of Hated By Many LLC.
             Unauthorized use of these marks is prohibited.
           </Clause>
         </LegalSection>

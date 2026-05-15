@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
 
 import { HomepageFooter } from "@/components/homepage/Footer";
+import { HomeGatewayMarketing } from "@/components/homepage/HomeGatewayMarketing";
 import { HomepageHeader } from "@/components/homepage/Header";
-import { AppGatewaySection } from "@/components/homepage/sections/AppGatewaySection";
-import { BaseSection } from "@/components/homepage/sections/BaseSection";
-import { CapitalMechanicsSection } from "@/components/homepage/sections/CapitalMechanicsSection";
 import { DossierSection } from "@/components/homepage/sections/DossierSection";
-import { ExecutionEngineSection } from "@/components/homepage/sections/ExecutionEngineSection";
-import { FlashCreditSection } from "@/components/homepage/sections/FlashCreditSection";
-import { InstitutionsSection } from "@/components/homepage/sections/InstitutionsSection";
-import { MaisonSection } from "@/components/homepage/sections/MaisonSection";
 import { OuvertureSection } from "@/components/homepage/sections/OuvertureSection";
-import { RiskSection } from "@/components/homepage/sections/RiskSection";
-import { ThesisSection } from "@/components/homepage/sections/ThesisSection";
 import { homepageCopy } from "@/lib/homepage-copy";
 
 export const metadata: Metadata = {
@@ -31,16 +23,8 @@ export default function Home() {
       </a>
       <HomepageHeader />
       <main className="pt-[72px]">
-        <OuvertureSection />
-        <ThesisSection />
-        <FlashCreditSection />
-        <ExecutionEngineSection />
-        <CapitalMechanicsSection />
-        <BaseSection />
-        <RiskSection />
-        <InstitutionsSection />
-        <MaisonSection />
-        <AppGatewaySection />
+        <OuvertureSection showEditorial={false} />
+        <HomeGatewayMarketing />
         <DossierSection />
       </main>
       <HomepageFooter />

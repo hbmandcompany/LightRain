@@ -1,27 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 
 import { EngraveMark } from "@/components/homepage/illustrations/EngraveMark";
 import { useHideHeaderOnScrollDown } from "@/hooks/useHideHeaderOnScrollDown";
 import { homepageCopy } from "@/lib/homepage-copy";
 
-const sectionIds = [
-  "section-these",
-  "section-pratique",
-  "section-mecanique",
-  "section-garanties",
-  "section-maison",
-  "section-dossier",
-] as const;
+function navHrefToSectionId(href: string): string {
+  const hash = href.lastIndexOf("#");
+  if (hash !== -1) return href.slice(hash + 1);
+  return href.startsWith("#") ? href.slice(1) : "";
+}
 
 export function HomepageHeader() {
+  const pathname = usePathname();
   const headerHidden = useHideHeaderOnScrollDown();
-  const [active, setActive] = useState<string>(sectionIds[0]);
+  const navIds = useMemo(
+    () =>
+      homepageCopy.header.nav
+        .map((item) => navHrefToSectionId(item.href))
+        .filter((id) => id.length > 0),
+    [],
+  );
+  const [active, setActive] = useState<string>(navIds[0] ?? "section-these");
 
   useEffect(() => {
-    const els = sectionIds
+    const els = navIds
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
     if (els.length === 0) return;
@@ -42,7 +48,7 @@ export function HomepageHeader() {
       observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [pathname, navIds]);
 
   return (
     <header
@@ -55,7 +61,7 @@ export function HomepageHeader() {
       <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between gap-4 px-6 md:px-10">
         <div className="min-w-0 shrink">
           <Link
-            href="#section-ouverture"
+            href="/"
             className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
           >
             <EngraveMark />
@@ -67,7 +73,7 @@ export function HomepageHeader() {
             className="hidden max-w-none overflow-x-auto md:flex md:items-center md:gap-6"
           >
             {homepageCopy.header.nav.map((item) => {
-              const id = item.href.replace("#", "");
+              const id = navHrefToSectionId(item.href);
               const isActive = active === id;
               return (
                 <a

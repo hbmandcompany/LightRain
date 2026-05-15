@@ -8,22 +8,44 @@ import { Reveal } from "@/components/primitives/Reveal";
 import { Numeral } from "@/components/primitives/Numeral";
 import { homepageCopy } from "@/lib/homepage-copy";
 
-export function OuvertureSection() {
+type OuvertureSectionProps = {
+  /** When false, omits the hero card band (LedgerBranch / sign-on). */
+  showHeroBand?: boolean;
+  /** When false, omits the editorial block (eyebrow, headline, body, CTA, compass, stats). */
+  showEditorial?: boolean;
+};
+
+export function OuvertureSection({
+  showHeroBand = true,
+  showEditorial = true,
+}: OuvertureSectionProps) {
   const c = homepageCopy.ouverture;
+  const onlyHeroBand = showHeroBand && !showEditorial;
 
   return (
     <section
       id={c.sectionId}
-      aria-labelledby={c.headingId}
-      className="min-h-screen bg-ivory pt-12 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28"
+      {...(showEditorial
+        ? { "aria-labelledby": c.headingId }
+        : { "aria-label": "LightRain" })}
+      className={`bg-ivory pb-16 md:pb-24 lg:pb-28 ${
+        onlyHeroBand
+          ? "min-h-0 pt-12 md:pt-14 lg:pt-16"
+          : showEditorial
+            ? "min-h-screen pt-12 md:pt-14 lg:pt-16"
+            : "min-h-screen pt-8 md:pt-10"
+      }`}
     >
-      <div className="hero-ouverture-texture w-full">
-        <div className="relative z-[1] mx-auto w-full max-w-[1280px] px-6 md:px-10">
-          <OuvertureHeroBand />
+      {showHeroBand ? (
+        <div className="hero-ouverture-texture w-full">
+          <div className="relative z-[1] mx-auto w-full max-w-[1280px] px-6 md:px-10">
+            <OuvertureHeroBand />
+          </div>
         </div>
-      </div>
+      ) : null}
 
-      <div className="relative z-[1] mx-auto w-full max-w-[1280px] px-6 md:px-10">
+      {showEditorial ? (
+        <div className="relative z-[1] mx-auto w-full max-w-[1280px] px-6 md:px-10">
         <div className="grid grid-cols-12 gap-8 border-b border-trame pb-4 pt-6 md:pt-8 [border-bottom-width:0.5px]">
           <p className="col-span-12 font-mono text-[11px] font-normal uppercase tracking-eyebrow-wide text-sable lg:col-span-4">
             {c.eyebrow}
@@ -94,6 +116,7 @@ export function OuvertureSection() {
           </div>
         </div>
       </div>
+      ) : null}
     </section>
   );
 }

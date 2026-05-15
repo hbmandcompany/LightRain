@@ -49,9 +49,9 @@ export function SignOnCard({
           </label>
           <input
             id={userId}
-            name="user"
-            type="text"
-            autoComplete="username"
+            name="email"
+            type="email"
+            autoComplete="email"
             placeholder={usernameLabel}
             className="w-full border-0 border-b border-trame bg-transparent py-2 text-[15px] font-normal leading-normal text-noir outline-none placeholder:text-sable [border-bottom-width:0.5px] focus:border-noir"
           />
@@ -80,13 +80,13 @@ export function SignOnCard({
 
         <div className="flex flex-wrap items-center gap-3">
           <Link
-            href="/download"
+            href="/#access"
             className="inline-flex h-8 items-center justify-center rounded-full border border-solid border-noir border-[0.5px] bg-noir px-7 font-sans text-[13px] font-normal text-parchment transition-shadow hover:shadow-[inset_0_0_0_1px_#0E0E0C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordeaux"
           >
             {signOn}
           </Link>
           <Link
-            href="/download"
+            href="/#access"
             className="font-sans text-[13px] font-normal text-bordeaux underline-offset-2 hover:underline"
           >
             {enroll}
@@ -111,7 +111,7 @@ export function SignOnCard({
           href="/legal"
           className="pointer-events-auto absolute bottom-3 right-3 font-mono text-[9px] text-sable underline-offset-2 hover:underline select-none"
         >
-          legal
+          Legal Notice
         </Link>
       </div>
     </div>
