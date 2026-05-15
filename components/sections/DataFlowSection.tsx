@@ -140,19 +140,23 @@ export function DataFlowSection() {
     <section
       id="architecture"
       aria-labelledby="dataflow-heading"
-      className="min-h-screen bg-bone py-24 md:py-32"
+      className="min-h-screen bg-ivory py-24 text-noir md:py-32"
     >
       <Container>
         <Reveal>
-          <Eyebrow className="mb-8">{copy.dataFlow.eyebrow}</Eyebrow>
+          <Eyebrow className="mb-8 !text-sable">{copy.dataFlow.eyebrow}</Eyebrow>
         </Reveal>
         <Reveal delay={0.06}>
-          <SectionHeading id="dataflow-heading" variant="lg" className="mb-10">
+          <SectionHeading
+            id="dataflow-heading"
+            variant="lg"
+            className="mb-10 !text-noir"
+          >
             {copy.dataFlow.headline}
           </SectionHeading>
         </Reveal>
         <Reveal delay={0.12}>
-          <p className="mb-16 max-w-[62ch] text-[17px] font-normal leading-[1.6] tracking-normal text-ink">
+          <p className="mb-16 max-w-[62ch] text-[17px] font-normal leading-[1.6] tracking-normal text-noir">
             {copy.dataFlow.body}
           </p>
         </Reveal>

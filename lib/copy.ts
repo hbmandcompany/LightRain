@@ -4,7 +4,7 @@ const heroDescription =
 export const gateway = {
   returnLink: { label: "← Retour à LightRain", href: "/" },
   headerSuffix: "Institutional app",
-  heroEyebrow: "iOS · read-only · application gateway",
+  heroEyebrow: "Application gateway",
   heroSecondaryCta: "Continue to TestFlight →",
   heroSubline:
     "Sign in to your institutional LightRain instance, or request a TestFlight invitation.",
@@ -24,7 +24,7 @@ export const copy = {
       { label: "Trust", href: "#trust" },
       { label: "Hated By Many", href: "#company" },
     ],
-    requestAccess: "Request access",
+    requestAccess: "About us",
   },
 
   footer: {
@@ -35,7 +35,7 @@ export const copy = {
         links: [
           { label: "Overview", href: "#overview" },
           { label: "App", href: "#application" },
-          { label: "Roadmap", href: "#access" },
+          { label: "About us", href: "#access" },
         ],
       },
       {
@@ -59,7 +59,7 @@ export const copy = {
         links: [
           { label: "press", href: "mailto:press@lightra.in" },
           { label: "partnerships", href: "mailto:partnerships@lightra.in" },
-          { label: "institutional access", href: "#access" },
+          { label: "About us", href: "#access" },
         ],
       },
     ],
@@ -69,11 +69,11 @@ export const copy = {
   },
 
   hero: {
-    eyebrow: "iOS · read-only · institutional",
+    eyebrow: "Institutional",
     headline: "The trust layer of LightRain execution, on a phone.",
     body: heroDescription,
     primaryCta: "See the architecture",
-    secondaryCta: "Request institutional access",
+    secondaryCta: "About the house",
     metrics: [
       { label: "Notional reconciled", value: "$1.84B" },
       { label: "Avg push latency", value: "214 ms" },
@@ -301,25 +301,26 @@ export const copy = {
   },
 
   access: {
-    eyebrow: "Section 08 · access",
-    headline: "Institutional access by request.",
-    body: "LightRain is in private TestFlight. Access is granted to institutional counterparties, allocators, and audit firms working with the LightRain stack. Submit your firm and we will be in touch within five business days.",
-    form: {
-      name: "Name",
-      firm: "Firm",
-      email: "Work email",
-      role: "Role",
-      why: "Why LightRain",
-      submit: "Request access",
-      success:
-        "Received. We respond within five business days where there is a fit.",
+    eyebrow: "Section 08 · la maison",
+    headline: "About the house.",
+    intro:
+      "LightRain is operated by Hated By Many LLC as a narrow institutional surface: read-only observability over the execution stack on Base. The house does not distribute keys through an app store posture, and it does not pretend the phone is a signing device. The product is the ledger of what already happened, rendered with latency low enough to matter in a close.",
+    bodyMid:
+      "We work with counterparties, allocators, and audit firms who need the same facts on the desk and in the file. Correspondence is deliberate. There is no self-serve queue because the relationship is the perimeter: you either fit the mandate or you do not.",
+    bodyClose:
+      "If you are evaluating the stack, start with architecture and trust. If you are already inside the relationship, the application is the glass through which the house shows its work.",
+    quote: {
+      body:
+        "Read-only is not humility. It is structural law: the eyes of the stack, never the hands.",
+      attribution: "Note d'intention, LightRain protocol",
     },
-    aside: {
-      lines: [
-        "press@lightra.in",
-        "partnerships@lightra.in",
-        "Hated By Many LLC · Texas",
-      ],
-    },
+    pillars: [
+      { label: "Operated by", value: "Hated By Many LLC" },
+      { label: "Domicile", value: "Texas, United States" },
+      { label: "Chain posture", value: "LightRain execution on Base" },
+      { label: "Client surface", value: "Signed iOS observability only" },
+    ],
+    asideTitle: "Correspondence",
+    contactLines: ["press@lightra.in", "partnerships@lightra.in"],
   },
 } as const;

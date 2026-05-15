@@ -161,13 +161,13 @@ function AnnotationColumn({
           <div
             className={`mb-3 flex items-center gap-3 ${align === "right" ? "flex-row-reverse" : ""}`}
           >
-            <div className="h-px flex-1 bg-hair" />
+            <div className="h-px flex-1 bg-trame" />
           </div>
-          <Eyebrow className="mb-2">{a.eyebrow}</Eyebrow>
-          <p className="text-[13px] font-normal leading-[1.6] text-ink">
+          <Eyebrow className="mb-2 !text-sable">{a.eyebrow}</Eyebrow>
+          <p className="text-[13px] font-normal leading-[1.6] text-noir">
             {a.label}
           </p>
-          <p className="mt-2 font-mono text-[11px] font-normal text-mist">
+          <p className="mt-2 font-mono text-[11px] font-normal text-sable">
             {a.mono}
           </p>
         </div>
@@ -181,19 +181,23 @@ export function PhoneMockSection() {
     <section
       id="application"
       aria-labelledby="phone-heading"
-      className="min-h-screen bg-bone py-24 md:py-32"
+      className="min-h-screen bg-ivory py-24 text-noir md:py-32"
     >
       <Container>
         <Reveal>
-          <Eyebrow className="mb-8">{copy.phoneMock.eyebrow}</Eyebrow>
+          <Eyebrow className="mb-8 !text-sable">{copy.phoneMock.eyebrow}</Eyebrow>
         </Reveal>
         <Reveal delay={0.06}>
-          <SectionHeading id="phone-heading" variant="lg" className="mb-10">
+          <SectionHeading
+            id="phone-heading"
+            variant="lg"
+            className="mb-10 !text-noir"
+          >
             {copy.phoneMock.headline}
           </SectionHeading>
         </Reveal>
         <Reveal delay={0.12}>
-          <p className="mb-16 max-w-[62ch] text-[17px] font-normal leading-[1.6] tracking-normal text-ink">
+          <p className="mb-16 max-w-[62ch] text-[17px] font-normal leading-[1.6] tracking-normal text-noir">
             {copy.phoneMock.body}
           </p>
         </Reveal>

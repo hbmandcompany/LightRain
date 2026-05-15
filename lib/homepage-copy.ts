@@ -301,7 +301,7 @@ export const homepageCopy = {
     eyebrow: "§ 10 — Surveillance · the application",
     headline: "LightRain — the trust layer, on a phone.",
     body: "LightRain is the iOS application of the house. Read-only, institutional, App Store-distributed. It renders every LightRain position, reconciliation, and oracle attestation in real time. It does not sign transactions. It does not move funds. It is the eyes of the protocol, never the hands.",
-    cta: { label: "Request access", href: "/#access" },
+    cta: { label: "About us", href: "/#access" },
     phoneScreenTitle: "Portfolio",
   },
   dossier: {
